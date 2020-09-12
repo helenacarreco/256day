@@ -1,0 +1,66 @@
+body { 
+    background-color: $bg-color; 
+    .container {
+        margin-top: 100px; 
+        p {
+          margin: 0px;
+        }
+        .phrase {
+            color: $font-color;
+            text-shadow: 0 0 80px $font-color-200,0 0 30px $font-color-200,0 0 6px $font-color-contrast;
+            span {
+                animation: phrase 11s linear infinite;
+            }
+        }
+        .http-status {
+            .status {
+              text-shadow: 0 0 30px $font-color-200;
+              opacity: 1;
+            }
+            .status::before{
+              animation: status 5s linear infinite;
+              content: '2';
+            }
+            span:nth-of-type(2) {
+                text-shadow: none;
+                opacity:.4;
+            } 
+            span:nth-of-type(3) {
+                animation: http-status 5s linear infinite;
+            }
+        }
+    }
+}
+
+@keyframes status {
+  0% {
+    content: '2';
+  }
+  30% {
+    content: '5';
+    opacity:0.9; 
+    text-shadow: 0 0 30px $font-color-500,0 0 30px $font-color-500,0 0 6px $font-color-500;
+  }
+}
+
+@keyframes phrase {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity:.99; 
+    text-shadow: 0 0 80px $font-color,0 0 30px $font-color-200,0 0 6px $font-color-contrast;
+  }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity:0.4; 
+    text-shadow: none; 
+  }
+}
+
+@keyframes http-status {
+  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
+    opacity:0.9; 
+    text-shadow: 0 0 80px $font-color-500,0 0 30px $font-color-500,0 0 6px $font-color-500;
+  }
+  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% { 
+    opacity:0.4; 
+    text-shadow: none; 
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "256day",
+  "version": "1.0.0",
+  "description": "celebrating the programmer's day",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "author": "Helena Carreço Bastos",
+  "license": "ISC"
+}
